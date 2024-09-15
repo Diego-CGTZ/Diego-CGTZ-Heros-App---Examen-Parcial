@@ -7,9 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.herosapp_examenparcial.activities.HomeActivity
+import com.example.herosapp_examenparcial.activities.PublisherActivity
 import com.example.herosapp_examenparcial.models.User
 import com.google.android.material.snackbar.Snackbar
 
@@ -24,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
         val isLogged = sharedPreferences.getBoolean("isLogged",false)
         if(isLogged){
-            val intent = Intent(this@MainActivity,HomeActivity::class.java)
+            val intent = Intent(this@MainActivity,PublisherActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -60,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             val editor = sharedPreferences.edit()
             editor.putBoolean("isLogged",true)
             editor.apply()
-            val intent = Intent(this@MainActivity,HomeActivity::class.java)
+            val intent = Intent(this@MainActivity,PublisherActivity::class.java)
             startActivity(intent)
             finish()
         }

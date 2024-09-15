@@ -3,4 +3,5 @@
     <string name="login_text">Inicio de sesion</string>
     <string name="password">Contraseña</string>
     <string name="email">Email</string>
+    <string name="category_name">Nombre de la categoria</string>
 </resources>
